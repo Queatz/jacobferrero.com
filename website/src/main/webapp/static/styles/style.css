@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
+
+body, html {
+	margin: 0;
+	height: 100%;
+
+	font-family: 'Cinzel', Serif;
+	color: #090909;
+	font-size: 18pt;
+
+	background-color: #eee;
+	background-image: url('../images/jacob.jpg');
+	background-size: 100% auto;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.content {
+	background: rgba(238, 238, 238, .75);
+	display: inline-block;
+	height: 100%;
+}
+
+div.content > div {
+	padding: 2em;
+}
+
+div.picture {
+	position: relative;
+	display: none;
+	width: 100%;
+	padding-bottom: 75%;
+}
+
+div.picture > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-image: url('../images/jacob.jpg');
+	background-size: 100% auto;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+}
+
+div.name {
+	font-size: 54pt;
+}
+
+div.title {
+	font-size: 24pt;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 1280px) {
+    body, html {
+    	background: #eee;
+    }
+
+    div.picture {
+    	display: block;
+    }
+
+
+	div.content {
+		background: transparent;
+		display: block;
+	}
+
+	div.content > div {
+		padding-top: 1em;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 16pt;
+	}
+
+	div.content > div {
+		padding: .5em;
+	}
+
+	div.title {
+		font-size: 18pt;
+	}
+
+	div.name {
+		font-size: 28pt;
+		font-weight: bold;
+	}
+
+	ul {
+		width: 100%;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	ul li {
+		width: 100%;
+		border-bottom: 1px dotted #aaa;
+		padding: .25em;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
