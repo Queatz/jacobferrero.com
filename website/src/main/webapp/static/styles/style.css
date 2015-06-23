@@ -22,7 +22,7 @@ a {
 div.content {
 	background: rgba(238, 238, 238, .75);
 	display: inline-block;
-	height: 100%;
+	min-height: 100%;
 }
 
 div.content > div {
