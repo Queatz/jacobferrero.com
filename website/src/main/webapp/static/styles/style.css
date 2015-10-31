@@ -5,22 +5,24 @@ body, html {
 	height: 100%;
 
 	font-family: 'Cinzel', Serif;
-	color: #090909;
+	color: #fff;
 	font-size: 18pt;
 
-	background-color: #eee;
-	background-image: url('../images/jacob.jpg');
-	background-size: 100% auto;
-	background-position: 50% 0%;
+	background-color: #000;
+	background-image: url('../images/Sat Jun 28 2014 11-08-32 GMT-0700.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
 a {
 	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
 div.content {
-	background: rgba(238, 238, 238, .75);
+	background: rgba(0, 0, 0, .333);
 	display: inline-block;
 	min-height: 100%;
 }
@@ -29,53 +31,12 @@ div.content > div {
 	padding: 2em;
 }
 
-div.picture {
-	position: relative;
-	display: none;
-	width: 100%;
-	padding-bottom: 75%;
-}
-
-div.picture > div {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	background-image: url('../images/jacob.jpg');
-	background-size: 100% auto;
-	background-position: 50% 0%;
-	background-repeat: no-repeat;
-}
-
 div.name {
-	font-size: 54pt;
+	font-size: 32pt;
 }
 
 div.title {
-	font-size: 24pt;
-	font-weight: bold;
-}
-
-@media screen and (max-width: 1280px) {
-    body, html {
-    	background: #eee;
-    }
-
-    div.picture {
-    	display: block;
-    }
-
-
-	div.content {
-		background: transparent;
-		display: block;
-	}
-
-	div.content > div {
-		padding-top: 1em;
-	}
+	font-size: 22pt;
 }
 
 @media screen and (max-width: 640px) {
@@ -83,8 +44,9 @@ div.title {
 		font-size: 16pt;
 	}
 
-	div.content > div {
-		padding: .5em;
+	div.content {
+		width: 100%;
+		text-align: center;
 	}
 
 	div.title {
@@ -105,7 +67,6 @@ div.title {
 
 	ul li {
 		width: 100%;
-		border-bottom: 1px dotted #aaa;
 		padding: .25em;
 		margin-left: 0;
 		padding-left: 0;
