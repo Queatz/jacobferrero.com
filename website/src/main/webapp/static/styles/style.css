@@ -9,7 +9,7 @@ body, html {
 	font-size: 18pt;
 
 	background-color: #000;
-	background-image: url('../images/jacob.jpg');
+	background-image: url('./static/images/jacob.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
