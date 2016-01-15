@@ -1,74 +1,107 @@
-@import url(http://fonts.googleapis.com/css?family=Cinzel);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic);
 
 body, html {
 	margin: 0;
-	height: 100%;
 
-	font-family: 'Cinzel', Serif;
-	color: #fff;
-	font-size: 18pt;
+	color: #121212;
+	font-size: 16pt;
+	font-family: 'Open Sans', sans-serif;
 
-	background-color: #000;
-	background-image: url('../images/jacob.jpg');
-	background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+	background: #e6e6e6;
+}
+
+.page {
+    max-width: 800px;
+    background: #fff;
+    margin: 48px auto;
+    padding: 48px;
+    border-radius: 5px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, .125);
+}
+
+.spacer-t {
+    margin-top: 48px;
+}
+
+.cols {
+    display: flex;
+}
+
+.links > a {
+    padding-left: 1em;
+    white-space: nowrap;
+}
+
+.links {
+    line-height: 2.5em;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #e5e5e5;
+}
+
+.fav {
+    width: 1em;
+    height: 1em;
+    vertical-align: -6%;
+    margin-right: .5em;
+}
+
+.content {
+    padding-left: 48px;
+}
+
+.section-header {
+    color: #636363;
+    font-style: italic;
+    line-height: 2em;
+}
+
+.photo {
+    display: inline-block;
+    border-radius: 100%;
+    width: 256px;
+    height: 256px;
+    min-width: 256px;
+    min-height: 256px;
+    background: url('https://lh3.googleusercontent.com/-_u9tF59VLug/AAAAAAAAAAI/AAAAAAADjCU/OeRnnsKBJbQ/s256-p-k-rw-no/photo.jpg') 50% 50%;
+}
+
+.info {
+    margin-left: 48px;
+    vertical-align: top;
+    padding-bottom: 48px;
+    line-height: 1.33em;
+}
+
+.name {
+    font-size: 22pt;
+    line-height: 1.75em;
+}
+
+.about {
+    color: #636363;
+    font-size: 14pt;
+}
+
+.dim {
+    color: #969696;
+}
+
+.small {
+    text-align: justify;
+    font-size: 14pt;
+}
+
+.insta {
+    width: 256px;
+}
+
+.insta > img {
+    border-radius: 3px;
 }
 
 a {
 	text-decoration: none;
-	color: white;
-	font-weight: bold;
-}
-
-div.content {
-	background: rgba(0, 0, 0, .333);
-	display: inline-block;
-	min-height: 100%;
-}
-
-div.content > div {
-	padding: 2em;
-}
-
-div.name {
-	font-size: 32pt;
-}
-
-div.title {
-	font-size: 22pt;
-}
-
-@media screen and (max-width: 640px) {
-	body {
-		font-size: 16pt;
-	}
-
-	div.content {
-		width: 100%;
-		text-align: center;
-	}
-
-	div.title {
-		font-size: 18pt;
-	}
-
-	div.name {
-		font-size: 28pt;
-		font-weight: bold;
-	}
-
-	ul {
-		width: 100%;
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
-	}
-
-	ul li {
-		width: 100%;
-		padding: .25em;
-		margin-left: 0;
-		padding-left: 0;
-	}
 }
