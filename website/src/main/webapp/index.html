@@ -6,6 +6,20 @@
         <link rel="shortcut icon" href="favicon.png" />
 		<title>Jacob Ferrero</title>
 		<script src="static/instafeed.min.js"></script>
+		<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script>
+            var showHireMeForm = function () {
+                $('#hire-me').slideDown(500);
+                $('#hire-me-button').slideUp(500);
+                $('#contact').focus();
+            }
+
+            var submit = function () {
+                $.post('/api/request-quote', $('#hire').serialize());
+                $('#hire-me').slideUp(500);
+                $('#hire-me-success').slideDown(500);
+            }
+        </script>
 	</head>
 	<body>
         <div>
@@ -28,9 +42,48 @@
                         </p>
                     </div>
                     <div class="small">
-                        <p>Jacob is a software developer from <a href="https://en.wikipedia.org/wiki/Connecticut" target="_blank">Connecticut</a> with vested interests in the social utility aspects of technology.  He cares deeply about how we can use technology to help billions of people understand each other, and bring to light the innermost dreams they usually keep to themselves.</p>
+                        <div id="hire-me-button" class="hire-me-already">
+                            <button class="button" onclick="showHireMeForm();">Hire Jacob</button>
+                        </div>
+                        <div id="hire-me" style="display: none;" class="hire-me-already">
+                            <form id="hire" name="hire" class="form" action="javascript: submit();" onsubmit="javascript: submit();">
+                                <div class="heading">What's the best way to reach you?</div>
+                                <input class="is-text-input" type="text" name="contact" id="contact" placeholder="email or phone" />
+                                <br />
+
+                                <div class="heading">What do you need help with?</div>
+                                <div style="margin: .5em;">
+                                    <input type="checkbox" id="android" name="android" />
+                                    <label for="android">Android</label>
+
+                                    <input type="checkbox" id="web" name="web" />
+                                    <label for="web">Website</label>
+
+                                    <input type="checkbox" id="backend" name="backend" />
+                                    <label for="backend">Backend</label>
+
+                                    <input type="checkbox" id="ux" name="ux" />
+                                    <label for="ux">UI / UX Design</label>
+                                </div>
+
+                                <div class="heading">When do you need to start development?</div>
+                                <input class="is-text-input" type="text" id="start" name="start" placeholder="in 2 weeks" />
+
+                                <div class="heading">Briefly describe your needs:</div>
+                                <textarea rows="6" class="is-text-input" name="description" id="description"></textarea>
+                                <br />
+                                <div style="text-align: center;">
+                                    <input type="submit" class="button" value="Request Quote" />
+                                </div>
+                            </form>
+                        </div>
+                        <div id="hire-me-success" style="display: none;" class="hire-me-already">
+                            <button class="button" onclick="showHireMeForm();" disabled="disabled">Thanks!</button>
+                        </div>
+                        <p>Jacob is a software developer from <a href="https://en.wikipedia.org/wiki/Connecticut" target="_blank">Connecticut</a> with vested interests in the social utility aspects of technology.  He cares deeply about how we can use technology to help billions of people understand each other, and bring to fruition their dreams and aspirations.</p>
                         <p>When he was a young boy, Jacob asked himself, <i>"How does a nobody get to Mars?"</i> He is currently in the process of discovering that vision.</p>
-                        <p>When he's not programming or catching up with friends, you can find Jacob doing his favorite thing, wandering around the <a href="http://presidio.gov" target="_blank">Presido</a> in the dead of night untangling complex world issues.</p>
+                        <p>As a programmer, Jacob cares deeply about the lifespan of his work.  He constantly asks himself, "in what ways might people want to use my code in the future?"</p>
+                        <p>When he's not programming or catching up with friends, you can find him doing his favorite thing, wandering around the <a href="http://presidio.gov" target="_blank">Presido</a> in the dead of night untangling complex world issues.</p>
                     </div>
                     <hr />
                     <div class="about">
